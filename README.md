@@ -1,0 +1,1 @@
+this is my lesson about scss and git

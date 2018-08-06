@@ -6,4 +6,55 @@
 body{
 	background: #262626;
 	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.cardBox{
+	perspective: 500px;
+	margin: 15px;
+	&:hover .card{
+		transform: rotateY(180deg);
+	}
+}
+.card{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	background: #fff;
+	transform-style: preserve-3d;
+	transition: .5s ease;
+	box-shadow: 0 30px 30px rgba(0,0,0,.5);
+}
+.facebook{
+	background: #3b5998;
+}
+.twitter{
+	background: #00aced;
+}
+.google{
+	background: #dd4b39;
+}
+.card-front, .card-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 150px;
+	color: #fff;
+	backface-visibility: hidden;
+}
+.card-front{
+	font-size: 40px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.card-back{
+	display: flex;
+	font-size: 30px;
+	justify-content: center;
+	align-items: center;
+	transform: rotateY(180deg);
 }
